@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Seu Endereco</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form>
+          <ion-item>
+            <ion-label>Cep</ion-label>
+            <ion-input [(ngModel)]="pessoa.endereco.cep" name="cep"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Rua</ion-label>
+            <ion-input [(ngModel)]="pessoa.endereco.rua" name="rua"></ion-input>
+        </ion-item>
+          <ion-item>
+            <ion-label>Bairro</ion-label>
+            <ion-input [(ngModel)]="pessoa.endereco.bairro" name="bairro"></ion-input>
+          </ion-item>
+        <ion-item>
+            <ion-label>Cidade</ion-label>
+            <ion-input [(ngModel)]="pessoa.endereco.cidade" name="cidade"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Estado</ion-label>
+            <ion-input [(ngModel)]="pessoa.endereco.estado" name="estado"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>País</ion-label>
+            <ion-input [(ngModel)]="pessoa.endereco.pais" name="pais"></ion-input>
+        </ion-item>
+        <button ion-button class="btnTirarFoto" (click)='tirarFoto()'>Tirar Foto</button>
+        <button ion-button (click)='buscaCep()'>Cep</button>
+    </form>
+    <ion-item>
+      <img src="{{foto}}"/>
+    </ion-item>  
+</ion-content>
